@@ -2,7 +2,7 @@
 
 <div><a href="/#/create">create a new post</a> | <a ng-click="logout(user._id)">LogOut</a></div>
 
-
+{{users}}
 
 <div style="padding-right: 100px;">
 <input type="text" ng-model="filter_name" placeholder="search"><br>
@@ -22,11 +22,11 @@
 	<tbody >
 
 		<tr ng-repeat = "poll in polls | filter: filter_name ">
-			<td>{{}}</td>
+			<td>{{users[0].user_name}}</td>
 
 			<td><a ng-click="onepoll(poll._id)">{{poll.question}}</a></td>
 			<td>{{poll.date | date:'MMMM d, y'}}</td>
-			<!-- <td><input type='submit' value='Remove' ng-click='deleteCustomer(customer)'> </td> -->
+			<td><input type='submit' value='delete' ng-click='deleteCustomer(customer)'> </td>
 		</tr>
 	</tbody>
 </table>
