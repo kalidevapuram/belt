@@ -1,0 +1,48 @@
+<div style="padding: 20px;">
+
+<a href="/#/dashboard">Go to Polls</a><br><br><br>
+
+
+<h3>{{poll.question}}</h3><br><br>
+
+
+<h5>Click the vote button to choose one</h5><br>
+<table border="0" cellspacing="5" cellpadding="5" margin= "1">
+
+	<thead>
+	<tr>
+		<th>Option</th>
+		<th>Current Count Of votes</th>
+		<th>Action</th>
+	</tr>
+	</thead>
+	<tbody >
+
+		<tr>
+			<td>{{poll.option1}}</td>
+			
+			<td>{{vote1}}</td>
+			<td><input type="submit" ng-click = "addvote1(poll.option1)" value="Vote"></td>
+		</tr>
+		<tr>
+			<td>{{poll.option2}}</td>
+
+			<td>{{vote2}}</td>
+			<td><input type="submit" ng-click = "addvote2(poll.option2)" value="Vote"></td>
+		</tr>
+		<tr>
+			<td>{{poll.option3}}</td>
+
+			<td>{{vote3}}</td>
+			<td><input type="submit" ng-click = "addvote3(poll.option3)" value="Vote"></td>
+		</tr>
+		<tr>
+			<td>{{poll.option4}}</td>
+
+			<td>{{vote4}}</td>
+			<td><input type="submit" ng-click = "addvote4(poll.option4)" value="Vote"></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+

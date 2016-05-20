@@ -1,0 +1,36 @@
+<div style="padding: 40px;">
+
+<div><a href="/#/create">create a new post</a> | <a ng-click="logout(user._id)">LogOut</a></div>
+
+
+
+<div style="padding-right: 100px;">
+<input type="text" ng-model="filter_name" placeholder="search"><br>
+    {{filter_name}}<br><br><br>
+ </div>
+
+<table border="0" cellspacing="5" cellpadding="5" margin= "1">
+
+	<thead>
+	<tr>
+		<th>Name</th>
+		<th>Survey Question</th>
+		<th>Date Posted</th>
+		<th>Action</th>
+	</tr>
+	</thead>
+	<tbody >
+
+		<tr ng-repeat = "poll in polls | filter: filter_name ">
+			<td>{{}}</td>
+
+			<td><a ng-click="onepoll(poll._id)">{{poll.question}}</a></td>
+			<td>{{poll.date | date:'MMMM d, y'}}</td>
+			<!-- <td><input type='submit' value='Remove' ng-click='deleteCustomer(customer)'> </td> -->
+		</tr>
+	</tbody>
+</table>
+
+
+
+</div>

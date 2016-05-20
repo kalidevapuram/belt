@@ -1,0 +1,18 @@
+<div ng-show = 'error' style="color: red">
+	{{error}}
+
+</div>
+
+
+
+
+<a href="/#/dashboard">cancel</a>
+
+<h3>Put the Questions and options here:</h3>
+
+Question:<input type="text" ng-model = "newquestion.question"><br><br><br>
+Option 1:<input type="text" ng-model = "newquestion.option1"><br><br><br>
+Option 2:<input type="text" ng-model = "newquestion.option2"><br><br><br>
+Option 3:<input type="text" ng-model = "newquestion.option3"><br><br><br>
+Option 4:<input type="text" ng-model = "newquestion.option4"><br><br><br>
+<input type="submit" ng-click = "createpoll(newquestion)" value="Create Poll">
